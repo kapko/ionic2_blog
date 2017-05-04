@@ -4,13 +4,26 @@
   </ion-navbar>
 </ion-header>
 
+
+
 <ion-content padding>
-  <button (click)="navAbout()">about page </button>
-  <ul>
-    <li *ngFor="let user of users">
-      <h5>#{{ user.index }} - {{ user.name }}</h5>
-      <p>{{ user.about  | limit : 50 }}</p>
+  <ion-icon 
+    (click)="newPost()"
+    ios="ios-add-circle" 
+    md="md-add-circle"></ion-icon>
+  <!--<ul>
+    <li *ngFor="let list of lists | async" (click)="updateList(list)">
+      <h5>#{{ list.index }} - {{ list.name }}</h5>
+      <p>{{ list.about | limit : 20 }}</p>
+      <span (click)="removeList(list)">remove</span>
       <hr />
     </li>
-  </ul>
+  </ul>-->
+  <ion-card *ngFor="let list of lists | async">
+    <ion-card-content>
+      <ion-card-title> # {{list.index}} - {{ list.name }}</ion-card-title>
+      <p>{{ list.about | limit : 50 }}</p>
+      <a (click)="detailPage(list)">More details </a>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
