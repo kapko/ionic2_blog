@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button (click)="navAbout()">about page </button>
+  <ul>
+    <li *ngFor="let user of users">
+      <h5>#{{ user.index }} - {{ user.name }}</h5>
+      <p>{{ user.about  | limit : 50 }}</p>
+      <hr />
+    </li>
+  </ul>
+</ion-content>
