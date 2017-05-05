@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CreatePost } from '../pages/home/create/create'
 import { Detail } from '../pages/home/detail/detail';
-
+import {EditPost} from '../pages/home/edit/edit'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 // configs
@@ -26,6 +26,7 @@ import {AngularFireModule} from 'angularfire2'
     ContactPage,
     HomePage,
     TabsPage,
+    EditPost,
     CreatePost,
     Detail,
     Limit
@@ -41,6 +42,7 @@ import {AngularFireModule} from 'angularfire2'
     CreatePost,
     AboutPage,
     ContactPage,
+    EditPost,
     HomePage,
     TabsPage,
     Detail

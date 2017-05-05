@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Edit your post</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input 
+          [(ngModel)]="data.name"
+          name="name" 
+          type="text" 
+          value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>About</ion-label>
+        <ion-textarea 
+          [(ngModel)]="data.about"
+          type="text"></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="danger" block (click)="cancel()">Cancel</button>
+      <button ion-button color="primary" block (click)="editPost()">Sign In</button>
+    </div>
+</ion-content>
